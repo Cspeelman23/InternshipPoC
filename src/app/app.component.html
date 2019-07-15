@@ -1,21 +1,58 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<h1>Proof of Concept FareFamily Layout</h1>
 
-<router-outlet></router-outlet>
+<body id="piedPiper">
+  <mat-card>
+      <h2>Placeholder</h2>
+  </mat-card>
+  <div class="offerings" >
+    <ng-container *ngFor="let ffsOffer of ffshopOfferings.FareFamilyOffering">
+      <mat-expansion-panel id="vision">
+          <mat-expansion-panel-header >
+            <div class="header">
+              <span >
+                <img src="../assets/images/tempAirline.png">
+                <!-- {{ffsOffer.}} -->
+              </span> &nbsp;
+              {{ffsOffer.Departure}} ⟶ {{ffsOffer.Arrival}}
+              <div>{{ffsOffer.ProductBrandPriceOption.length}} {{ffsOffer.ProductBrandPriceOption.length > 1 ? 'Options' : 'Option'}} </div>
+
+              <div class="cost" >From: ${{ffsOffer.ProductBrandPriceOption[0].Price.TotalPrice}}</div>
+
+            </div>                    
+              <!-- <div>
+                <ng-container *ngFor="let productOption of ffsOffering.productOptions">
+                  <div class="offerDetails">
+                    <div class="offerDeparture">                   
+                      <ng-container *ngFor="let cityName of cityDetails">
+                        <div *ngIf="cityName.IATA == productOption.departure.toUpperCase()">{{cityName.City}}</div>
+                      </ng-container>
+                      <div>&nbsp;({{productOption.departure | uppercase}})</div>
+                    </div>
+                    <div class="offerAirplane">
+                      <ng-container *ngFor="let flightsegment of productOption.products[0].flightSegment let last=last">
+                        <div class="offerSegment" *ngIf="!last">                        
+                          <div style="padding: 0px; margin: 0px"><img src="../../../../../assets/images/dot.png" style="padding: 0px; margin: -2px"alt="plane"></div>
+                          <div style="padding-left: 9px">{{flightsegment.flight.arrival.location}}</div>
+                        </div>                           
+                      </ng-container>
+                    </div>
+                    <div class="offerDeparture">
+                      <ng-container *ngFor="let cityName of cityDetails">
+                        <div *ngIf="cityName.IATA == productOption.arrival.toUpperCase()">{{cityName.City}}</div>
+                      </ng-container>
+                      <div>&nbsp;({{productOption.arrival | uppercase}})</div>
+                    </div>
+                    <div class="offerProducts">
+                      <div>{{productOption.products.length}} {{productOption.products.length > 1 ? 'Options' : 'Option'}} </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div> -->
+              <!-- <div class="currency">{{ffsOffering.price.TotalPrice | currency: ffsOffering.currency}}</div> -->
+            </mat-expansion-panel-header>
+            <!-- expansion panel body-->
+            <div class="cost" *ngFor="let prodOption of ffsOffer.ProductBrandPriceOption">Cost: ${{prodOption.Price.TotalPrice}}</div>
+      </mat-expansion-panel>
+    </ng-container>
+  </div>
+</body>

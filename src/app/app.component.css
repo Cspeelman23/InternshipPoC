@@ -1,0 +1,49 @@
+#vision{
+    border: black solid 1px;
+    margin-bottom: 1%;
+    width: auto;
+    
+}
+
+#piedPiper{
+    display: flex;
+}
+
+mat-card{
+    height: 462px;
+    width: 40%;
+    border: rgb(7, 182, 167) solid 3px;  
+}
+.offerings{
+    padding-left: 2%;
+    width: 59%;
+}
+.header{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+}
+.cost{
+    padding-right: 3%;
+}
+
+@media only screen and (max-width: 768px) {
+    #piedPiper{
+        margin: auto;
+        display: inline-block;
+        width: 98%;
+    }
+    mat-card{
+        margin: inherit;
+        margin-bottom: 2%;
+        display: inline-block;
+        height: 462px;
+        width: 100%;
+        border: rgb(7, 182, 167) solid 3px;  
+    }
+    .offerings{
+        margin: inherit;
+        padding-left: 0%;
+        width: 90%;
+    }
+}
