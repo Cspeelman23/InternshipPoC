@@ -18,15 +18,37 @@ mat-card{
     padding-left: 2%;
     width: 59%;
 }
+
 .header{
     display: flex;
     width:100%;
     justify-content: space-between;
 }
+.carrierInfo{
+    display: flex;
+    flex-direction: column;
+}
+.OandDInfo{
+    display: flex;
+    /* vertical centering */
+    align-self: center; 
+}
+.durationInfo{
+    padding-left: 3%;
+    padding-right: 3%;
+    border-left: solid #4a4a4a 2px;
+    border-right: solid #4a4a4a 2px;
+    text-align: center;
+    align-self: center;
+}
+#stops{
+    text-decoration: underline;
+}
 .minCost{
     padding-right: 3%;
     display: flex;
     align-content: flex-end;
+    align-self: center;
 }
 #overgroup{
     display: flex;

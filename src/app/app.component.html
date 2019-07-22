@@ -9,12 +9,17 @@
       <mat-expansion-panel id="vision">
           <mat-expansion-panel-header >
             <div class="header">
-              <span >
+              <span class="carrierInfo">
                 <img src="../assets/images/tempAirline.png">
+                XX
                 <!-- {{ffsOffer.}} -->
               </span> &nbsp;
-              {{ffsOffer.Departure}} ⟶ {{ffsOffer.Arrival}}
-              <div>{{ffsOffer.ProductBrandPriceOption.length}} {{ffsOffer.ProductBrandPriceOption.length > 1 ? 'Options' : 'Option'}} </div>
+              <div class="OandDInfo">{{ffsOffer.Departure}} ⟶ {{ffsOffer.Arrival}}</div>
+              <span class="durationInfo">
+                <!-- number of tiers returned: {{ffsOffer.ProductBrandPriceOption.length}} {{ffsOffer.ProductBrandPriceOption.length > 1 ? 'Options' : 'Option'}} -->
+                <div id="stops">Non-stop</div> 
+                <div>1hr 34min</div>
+              </span>
               <!-- first/min price only -->
               <div class="minCost" >From: ${{ffsOffer.ProductBrandPriceOption[0].Price.TotalPrice}}</div>
             </div>                    
