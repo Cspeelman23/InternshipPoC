@@ -18,6 +18,9 @@ mat-card{
     padding-left: 2%;
     width: 59%;
 }
+mat-expansion-panel mat-expansion-panel-header {
+      height: auto!important; 
+}
 
 .header{
     display: flex;
@@ -31,7 +34,7 @@ mat-card{
 .OandDInfo{
     display: flex;
     /* vertical centering */
-    align-self: center; 
+    align-self: center;
 }
 .durationInfo{
     padding-left: 3%;
@@ -40,17 +43,20 @@ mat-card{
     border-right: solid #4a4a4a 2px;
     text-align: center;
     align-self: center;
+    width: 15%; 
 }
-#stops{
-    text-decoration: underline;
+hr{
+    margin:2px;
 }
 .minCost{
     padding-right: 3%;
+    padding-left: 2%;
     display: flex;
     align-content: flex-end;
     align-self: center;
 }
 #overgroup{
+    margin-top: 1%;
     display: flex;
     flex-wrap: nowrap;
 }
@@ -70,8 +76,9 @@ mat-card{
 
 .tier{
     border: solid black 2px;
-    width: 47%;
+    width: 45%;
     height: 100px;
+    margin: 1%; 
 }
 .price{
     
