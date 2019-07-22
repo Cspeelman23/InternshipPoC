@@ -23,8 +23,38 @@ mat-card{
     width:100%;
     justify-content: space-between;
 }
-.cost{
+.minCost{
     padding-right: 3%;
+    display: flex;
+    align-content: flex-end;
+}
+#overgroup{
+    display: flex;
+    flex-wrap: nowrap;
+}
+#leftAlignGroup{
+    width: 49%;
+    display: flex;
+    justify-content: flex-start; 
+    border: solid orange 2px;
+
+}
+#rightAlignGroup{
+    width:50%; 
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap; 
+}
+
+.tier{
+    border: solid black 2px;
+    width: 47%;
+    height: 100px;
+}
+.price{
+    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 768px) {
@@ -45,5 +75,19 @@ mat-card{
         margin: inherit;
         padding-left: 0%;
         width: 90%;
+    }
+    #overgroup{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #leftAlignGroup{
+        width: 100%;
+        border: solid orange 2px;
+    
+    }
+    #rightAlignGroup{
+        width: 100%; 
+        justify-content: flex-start;
+        flex-wrap: wrap; 
     }
 }

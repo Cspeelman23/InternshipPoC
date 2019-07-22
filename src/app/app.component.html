@@ -16,43 +16,18 @@
               {{ffsOffer.Departure}} ⟶ {{ffsOffer.Arrival}}
               <div>{{ffsOffer.ProductBrandPriceOption.length}} {{ffsOffer.ProductBrandPriceOption.length > 1 ? 'Options' : 'Option'}} </div>
               <!-- first/min price only -->
-              <div class="cost" >From: ${{ffsOffer.ProductBrandPriceOption[0].Price.TotalPrice}}</div>
-
+              <div class="minCost" >From: ${{ffsOffer.ProductBrandPriceOption[0].Price.TotalPrice}}</div>
             </div>                    
-              <!-- <div>
-                <ng-container *ngFor="let productOption of ffsOffering.productOptions">
-                  <div class="offerDetails">
-                    <div class="offerDeparture">                   
-                      <ng-container *ngFor="let cityName of cityDetails">
-                        <div *ngIf="cityName.IATA == productOption.departure.toUpperCase()">{{cityName.City}}</div>
-                      </ng-container>
-                      <div>&nbsp;({{productOption.departure | uppercase}})</div>
-                    </div>
-                    <div class="offerAirplane">
-                      <ng-container *ngFor="let flightsegment of productOption.products[0].flightSegment let last=last">
-                        <div class="offerSegment" *ngIf="!last">                        
-                          <div style="padding: 0px; margin: 0px"><img src="../../../../../assets/images/dot.png" style="padding: 0px; margin: -2px"alt="plane"></div>
-                          <div style="padding-left: 9px">{{flightsegment.flight.arrival.location}}</div>
-                        </div>                           
-                      </ng-container>
-                    </div>
-                    <div class="offerDeparture">
-                      <ng-container *ngFor="let cityName of cityDetails">
-                        <div *ngIf="cityName.IATA == productOption.arrival.toUpperCase()">{{cityName.City}}</div>
-                      </ng-container>
-                      <div>&nbsp;({{productOption.arrival | uppercase}})</div>
-                    </div>
-                    <div class="offerProducts">
-                      <div>{{productOption.products.length}} {{productOption.products.length > 1 ? 'Options' : 'Option'}} </div>
-                    </div>
-                  </div>
-                </ng-container>
-              </div> -->
-              <!-- <div class="currency">{{ffsOffering.price.TotalPrice | currency: ffsOffering.currency}}</div> -->
-            </mat-expansion-panel-header>
+              
+          </mat-expansion-panel-header>
             <!-- expansion panel body-->
-            <div class="cost" *ngFor="let prodOption of ffsOffer.ProductBrandPriceOption">Cost: ${{prodOption.Price.TotalPrice}}</div>
-      </mat-expansion-panel>
+            <div id="overgroup">
+              <div id="leftAlignGroup">TEST</div>
+              <div id="rightAlignGroup">
+                <div class="tier" *ngFor="let prodOption of ffsOffer.ProductBrandPriceOption"><div class="price">Cost: ${{prodOption.Price.TotalPrice}}</div></div>
+              </div>
+            </div>
+            </mat-expansion-panel>
     </ng-container>
   </div>
 </body>

@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.ffsService.getJSON().subscribe(data => {
       this.ffshop = data;
-      // console.log(this.ffshop);
+      console.log(this.ffshop);
       this.fillShopOfferings();
     });
   }
